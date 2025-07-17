@@ -62,7 +62,9 @@ This document translates our product strategy and technical architecture into a 
 </td>
 <td style="width: 30%; vertical-align: top; border: none;">
 
-[![The MVP "Crisis Solver"](https://github.com/anurag6569201/navigator-ai-superapp/raw/77234604e18d6f2db0fb3ea1dd4c418934b5a4a8/resources/High-Level-System.png)](https://github.com/anurag6569201/navigator-ai-superapp/blob/77234604e18d6f2db0fb3ea1dd4c418934b5a4a8/resources/High-Level-System.png)
+[![The MVP "Crisis Solver"](https://github.com/anurag6569201/navigator-ai-superapp/raw/812c2b407699730794dc4b09e816f36277c38ac9/resources/Core-User-Flow.png
+)](https://github.com/anurag6569201/navigator-ai-superapp/blob/812c2b407699730794dc4b09e816f36277c38ac9/resources/Core-User-Flow.png
+)
 
 </td>
 </tr>
@@ -106,7 +108,7 @@ This document translates our product strategy and technical architecture into a 
 </td>
 <td style="width: 30%; vertical-align: top; border: none;">
 
-[![End-to-End Journey Planning](https://github.com/anurag6569201/navigator-ai-superapp/raw/77234604e18d6f2db0fb3ea1dd4c418934b5a4a8/resources/High-Level-System.png)](https://github.com/anurag6569201/navigator-ai-superapp/blob/77234604e18d6f2db0fb3ea1dd4c418934b5a4a8/resources/High-Level-System.png)
+[![End-to-End Journey Planning](https://github.com/anurag6569201/navigator-ai-superapp/raw/812c2b407699730794dc4b09e816f36277c38ac9/resources/End-to-End-Journey-Planning.png)](https://github.com/anurag6569201/navigator-ai-superapp/blob/812c2b407699730794dc4b09e816f36277c38ac9/resources/End-to-End-Journey-Planning.png)
 
 </td>
 </tr>
