@@ -1,6 +1,9 @@
 # Navigator AI - The Operating System for Indian Mobility
 
-![Navigator AI Banner](https://i.imgur.com/your-banner-image-url.png) 
+[![Navigator AI Banner](https://github.com/anurag6569201/navigator-ai-superapp/raw/5fe18c7059f72124a313e6f1e8c124b2868ae915/resources/navigator.ai.png
+)](https://github.com/anurag6569201/navigator-ai-superapp/blob/5fe18c7059f72124a313e6f1e8c124b2868ae915/resources/navigator.ai.png
+)
+
 
 **Navigator AI is a planned AI-native super app designed to eliminate travel anxiety in India by intelligently orchestrating a user's entire journey from their front door to their final destination.**
 
