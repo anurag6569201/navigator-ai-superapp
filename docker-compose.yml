@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres_db:
+    image: postgres:14-alpine
+    container_name: postgres_db
+    environment:
+      - POSTGRES_DB=navigator_db
+      - POSTGRES_USER=navigator
+      - POSTGRES_PASSWORD=supersecret
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  users_api:
+    build: ./backend/svc-users-django
+    container_name: users_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/svc-users-django:/app
+    ports:
+      - "8001:8000"
+    depends_on:
+      - postgres_db
+
+  journeys_api:
+    build: ./backend/svc-journeys-django
+    container_name: journeys_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/svc-journeys-django:/app
+    ports:
+      - "8002:8000"
+    depends_on:
+      - postgres_db
+
+  fair_api:
+    build: ./backend/svc-fair-django
+    container_name: fair_api
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend/svc-fair-django:/app
+    ports:
+      - "8003:8000"  
+    depends_on:
+      - postgres_db
+
+  ai_brain_api:
+    build: ./backend/svc-ai-brain-fastapi
+    container_name: ai_brain_api
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./backend/svc-ai-brain-fastapi:/app
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend-react
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - users_api
+      - journeys_api
+      - ai_brain_api
+      - fair_api 
+
+volumes:
+  postgres_data:
