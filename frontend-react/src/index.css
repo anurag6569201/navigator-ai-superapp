@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navigator AI Design System - Crystal Clarity Theme
+All colors MUST be HSL. Inspired by crystalline structures and space aesthetics.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    /* Core Space Theme */
+    --background: 220 26% 6%;
+    --foreground: 210 40% 98%;
+
+    /* Card & Surfaces */
+    --card: 220 20% 8%;
+    --card-foreground: 210 40% 98%;
+    --glass: 220 20% 12%;
+    --glass-border: 210 30% 25%;
+
+    /* Popover */
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Crystal Blue Primary */
+    --primary: 210 100% 70%;
+    --primary-foreground: 220 26% 6%;
+    --primary-glow: 210 100% 80%;
+    --primary-dark: 210 100% 50%;
+
+    /* Crystalline Secondary */
+    --secondary: 210 15% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted Elements */
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    /* Accent Highlights */
+    --accent: 190 100% 60%;
+    --accent-foreground: 220 26% 6%;
+
+    /* Danger States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Inputs */
+    --border: 210 15% 20%;
+    --input: 210 15% 18%;
+    --ring: 210 100% 70%;
+
+    /* Crystal Shards */
+    --shard-grey: 210 5% 30%;
+    --shard-glow: 210 100% 85%;
+    --chaos-ambient: 0 0% 5%;
+
+    /* Particle Effects */
+    --particle-blue: 210 100% 75%;
+    --particle-trail: 210 100% 60%;
+    --flow-path: 190 80% 50%;
+
+    /* Gradients */
+    --gradient-crystal: linear-gradient(135deg, hsl(210 100% 70%), hsl(190 100% 60%));
+    --gradient-space: radial-gradient(circle at center, hsl(220 26% 8%), hsl(220 26% 4%));
+    --gradient-shard: linear-gradient(45deg, hsl(210 5% 25%), hsl(210 5% 35%));
+
+    /* Shadows & Glows */
+    --shadow-crystal: 0 0 30px hsl(210 100% 70% / 0.3);
+    --shadow-shard: 0 5px 15px hsl(0 0% 0% / 0.5);
+    --glow-intense: 0 0 50px hsl(210 100% 70% / 0.6);
+
+    --radius: 8px;
+
+    --calm-thread: 199 89% 65%;
+    --chaos-line: 0 75% 55%;
+    --deep-background: 222 47% 4%;
+    --glow-primary: 199 89% 65%;
+    --glow-intensity: 0.4;
+    
+    --gradient-calm: linear-gradient(135deg, hsl(199 89% 65% / 0.2), hsl(199 89% 75% / 0.1));
+    --gradient-chaos: linear-gradient(135deg, hsl(0 75% 55% / 0.3), hsl(0 75% 45% / 0.1));
+    --shadow-glow: 0 0 40px hsl(var(--glow-primary) / var(--glow-intensity));
+    --shadow-calm: 0 10px 30px -10px hsl(var(--calm-thread) / 0.3);
+
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Glass Morphism Components */
+  .glass-surface {
+    background: hsl(var(--glass) / 0.1);
+    border: 1px solid hsl(var(--glass-border) / 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Crystal Glow Effects */
+  .crystal-glow {
+    box-shadow: var(--shadow-crystal);
+    filter: drop-shadow(0 0 20px hsl(var(--primary) / 0.3));
+  }
+
+  .shard-glow {
+    box-shadow: var(--shadow-shard);
+    filter: drop-shadow(0 0 10px hsl(var(--shard-grey) / 0.5));
+  }
+
+  /* 3D Canvas Styles */
+  .scene-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  /* Journey Text Overlays */
+  .journey-text {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    pointer-events: none;
+    font-weight: 200;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  /* Smooth Scroll */
+  html.lenis {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
