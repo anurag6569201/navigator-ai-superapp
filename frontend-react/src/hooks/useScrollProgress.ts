@@ -6,20 +6,24 @@ export function useScrollProgress() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = Math.min(scrolled / maxScroll, 1);
-      
-      setScrollProgress(progress);
-      
-      // Determine current act based on scroll progress
-      if (progress < 0.2) setCurrentAct(1); // Shard Storm
-      else if (progress < 0.5) setCurrentAct(2); // Crystallization  
-      else if (progress < 0.8) setCurrentAct(3); // Crystal Features
-      else setCurrentAct(4); // Human Flow & CTA
+      // Ensure we are in a browser environment
+      if (typeof window !== 'undefined') {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = window.scrollY;
+        const progress = maxScroll > 0 ? Math.min(scrolled / maxScroll, 1) : 0;
+        
+        setScrollProgress(progress);
+        
+        // Determine current act based on scroll progress
+        if (progress < 0.3) setCurrentAct(1);      // Act 1: Shard Storm
+        else if (progress < 0.6) setCurrentAct(2); // Act 2: Crystallization
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initial call to set state
+    handleScroll(); 
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

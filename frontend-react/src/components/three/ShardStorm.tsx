@@ -160,7 +160,7 @@ export default function ShardStorm({ count = 200, mousePosition, crystallizing }
         color={crystallizing ? "#60a5fa" : "#64748b"}
         transparent
         opacity={0.7}
-        emissive={crystallizing ? "#1e40af" : "#000000"}
+        emissive={crystallizing ? "#64748b" : "#000000"}
         emissiveIntensity={crystallizing ? 0.3 : 0}
       />
     </instancedMesh>

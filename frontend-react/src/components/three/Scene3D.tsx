@@ -61,6 +61,19 @@ export default function Scene3D({ currentAct, scrollProgress }: Scene3DProps) {
               count={150}
             />
           )}
+          <ambientLight intensity={0.2} />
+          <directionalLight 
+            position={[10, 10, 5]} 
+            intensity={0.5}
+            castShadow
+            shadow-mapSize-width={2048}
+            shadow-mapSize-height={2048}
+          />
+          <pointLight 
+            position={[0, 0, 0]} 
+            intensity={currentAct >= 2 ? 1 : 0}
+            color="#60a5fa"
+          />
           
           {/* Act II & III: Crystal Core */}
           {currentAct >= 2 && (

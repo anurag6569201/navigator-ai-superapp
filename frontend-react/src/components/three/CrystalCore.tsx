@@ -48,24 +48,7 @@ export default function CrystalCore({ visible, scale }: CrystalCoreProps) {
           emissiveIntensity={0.2}
         />
       </mesh>
-      
-      {/* Inner glow */}
-      <mesh geometry={geometry} scale={0.9}>
-        <meshBasicMaterial
-          color="#3b82f6"
-          transparent
-          opacity={0.3}
-        />
-      </mesh>
-      
-      {/* Outer aura */}
-      <mesh geometry={geometry} scale={1.2}>
-        <meshBasicMaterial
-          color="#60a5fa"
-          transparent
-          opacity={0.1}
-        />
-      </mesh>
+   
     </group>
   );
 }

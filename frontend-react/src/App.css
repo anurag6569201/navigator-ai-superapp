@@ -40,3 +40,59 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.scene-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.text-content {
+  text-align: center;
+  max-width: 90%;
+  padding: 0 1rem;
+}
+
+.title-text {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  font-weight: 200; /* extralight */
+  color: #f0f9ff; /* Or your primary text color */
+}
+
+.subtitle-text {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  color: #cbd5e1; /* Or your foreground color */
+  margin-top: 1rem;
+  max-width: 42rem; /* 672px */
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300; /* light */
+}
+
+.cta-button {
+  background-color: #3b82f6; /* Example primary color (blue-500) */
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    font-size: 3.75rem; /* 60px */
+    line-height: 1;
+  }
+  .subtitle-text {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
+}
